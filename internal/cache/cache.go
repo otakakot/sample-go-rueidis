@@ -6,6 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"log/slog"
+	"time"
 
 	hc "github.com/Code-Hex/go-generics-cache"
 	"github.com/redis/go-redis/v9"
@@ -113,9 +114,9 @@ func (rue *Rueidis[T]) Get(
 	ctx context.Context,
 	key string,
 ) (*T, error) {
-	cmd := rue.client.B().Get().Key(key).Build()
+	cmd := rue.client.B().Get().Key(key).Cache()
 
-	v, err := rue.client.Do(ctx, cmd).ToString()
+	v, err := rue.client.DoCache(ctx, cmd, time.Second).ToString()
 	if err != nil {
 		if errors.Is(err, rueidis.Nil) {
 			return nil, ErrNotFound
