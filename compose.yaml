@@ -1,0 +1,37 @@
+services:
+  redis:
+    container_name: redis
+    image: redis:7-alpine
+    ports:
+      - 6379:6379
+    restart: always
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - workdir=.
+    ports:
+      - 8080:8080
+    environment:
+      ENV: local
+      PORT: 8080
+    volumes:
+      - ./:/app
+    restart: always
+  bpp:
+    container_name: bpp
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - workdir=.
+    ports:
+      - 9090:9090
+    environment:
+      ENV: local
+      PORT: 9090
+    volumes:
+      - ./:/app
+    restart: always

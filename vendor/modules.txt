@@ -1,0 +1,37 @@
+# github.com/Code-Hex/go-generics-cache v1.5.1
+## explicit; go 1.18
+github.com/Code-Hex/go-generics-cache
+github.com/Code-Hex/go-generics-cache/policy/clock
+github.com/Code-Hex/go-generics-cache/policy/fifo
+github.com/Code-Hex/go-generics-cache/policy/internal/policyutil
+github.com/Code-Hex/go-generics-cache/policy/lfu
+github.com/Code-Hex/go-generics-cache/policy/lru
+github.com/Code-Hex/go-generics-cache/policy/mru
+github.com/Code-Hex/go-generics-cache/policy/simple
+# github.com/cespare/xxhash/v2 v2.2.0
+## explicit; go 1.11
+github.com/cespare/xxhash/v2
+# github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f
+## explicit
+github.com/dgryski/go-rendezvous
+# github.com/redis/go-redis/v9 v9.6.1
+## explicit; go 1.18
+github.com/redis/go-redis/v9
+github.com/redis/go-redis/v9/internal
+github.com/redis/go-redis/v9/internal/hashtag
+github.com/redis/go-redis/v9/internal/hscan
+github.com/redis/go-redis/v9/internal/pool
+github.com/redis/go-redis/v9/internal/proto
+github.com/redis/go-redis/v9/internal/rand
+github.com/redis/go-redis/v9/internal/util
+# github.com/redis/rueidis v1.0.47
+## explicit; go 1.21
+github.com/redis/rueidis
+github.com/redis/rueidis/internal/cmds
+github.com/redis/rueidis/internal/util
+# golang.org/x/exp v0.0.0-20240719175910-8a7402abbf56
+## explicit; go 1.20
+golang.org/x/exp/constraints
+# golang.org/x/sys v0.24.0
+## explicit; go 1.18
+golang.org/x/sys/cpu
