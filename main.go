@@ -23,7 +23,7 @@ func main() {
 
 	address := cmp.Or(os.Getenv("REDIS_ADDRESS"), "redis:6379")
 
-	mode := cmp.Or(os.Getenv("MODE"), "inmemory")
+	mode := cmp.Or(os.Getenv("MODE"), "rueidis")
 
 	mux := http.NewServeMux()
 
